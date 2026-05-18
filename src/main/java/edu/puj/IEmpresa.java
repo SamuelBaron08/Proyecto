@@ -3,5 +3,5 @@ package edu.puj;
 import java.util.ArrayList;
 
 public interface IEmpresa {
-    ArrayList<Cliente> getClientes();
+    public ArrayList<Cliente> getClientes();
 }

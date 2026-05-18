@@ -2,7 +2,7 @@ package edu.puj;
 
 import java.util.ArrayList;
 
-public class Empresa implements IEmpresa{
+public class Empresa implements IEmpresa {
 
     private String nombre;
     public ArrayList<Cliente> Clientes = new ArrayList<>();
@@ -26,16 +26,18 @@ public class Empresa implements IEmpresa{
         Clientes = clientes;
     }
 
-    public ArrayList<Cuenta> getCuentas() {
-        return Cuentas;
-    }
 
     public void setCuentas(ArrayList<Cuenta> cuentas) {
         Cuentas = cuentas;
     }
 
     @Override
-    public ArrayList<Cliente> getClientes() {
-        return null;
+    public ArrayList<Cliente> getClientes(){
+        ArrayList<Cliente> clientes = null;
+        for (Cliente c : Clientes) {
+            return null;
+        }
+    return null;
     }
+
 }
