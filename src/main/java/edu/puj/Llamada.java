@@ -9,6 +9,13 @@ public abstract class Llamada {
     private long telefonoDestinario;
     private long valor;
 
+    public Llamada(long duracion, LocalDate fecha, long telefonoDestinario, long valor) {
+        this.duracion = duracion;
+        this.fecha = fecha;
+        this.telefonoDestinario = telefonoDestinario;
+        this.valor = valor;
+    }
+
     public long calcularValor(){
         return 0;
     }
