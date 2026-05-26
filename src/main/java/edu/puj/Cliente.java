@@ -1,6 +1,6 @@
 package edu.puj;
 
-public class Cliente {
+public class    Cliente {
 
     private String direccion;
     private String identificacion;
@@ -56,5 +56,14 @@ public class Cliente {
         this.cuenta = cuenta;
     }
 
-
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "direccion='" + direccion + '\'' +
+                ", identificacion='" + identificacion + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", tipold='" + tipold + '\'' +
+                ", cuenta=" + cuenta +
+                '}';
+    }
 }
