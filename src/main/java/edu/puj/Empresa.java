@@ -32,12 +32,7 @@ public class Empresa implements IEmpresa {
     }
 
     @Override
-    public ArrayList<Cliente> getClientes(){
-        ArrayList<Cliente> clientes = null;
-        for (Cliente c : Clientes) {
-            return null;
-        }
-    return null;
+    public ArrayList<Cliente> getClientes() {
+        return Clientes;
     }
-
 }

@@ -59,4 +59,6 @@ public abstract class Llamada {
     }
 
     public abstract long calcularValor();
+
+    public abstract long calcularValor(Cuenta cuenta);
 }
