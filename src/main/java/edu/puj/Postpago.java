@@ -9,8 +9,10 @@ public class Postpago extends Cuenta{
         this.cargoFijo = cargoFijo;
     }
 
+
+
     @Override
-    public long obtenerPagoCuenta() {
-        return super.obtenerPagoCuenta();
+    public long obtenerPagoCuenta(int año, int mes) {
+        return 0;
     }
 }
