@@ -12,8 +12,9 @@ public class Prepago extends Cuenta{
         this.numeroMinutos = numeroMinutos;
     }
 
+
     @Override
-    public long obtenerPagoCuenta() {
-        return super.obtenerPagoCuenta();
+    public long obtenerPagoCuenta(int año, int mes) {
+        return 0;
     }
 }

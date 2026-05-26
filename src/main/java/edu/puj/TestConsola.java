@@ -9,20 +9,9 @@ public class TestConsola {
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner();
         int opcion;
         do {
             mostrarMenu();
-            System.out.println();("Seleccione una opcion: ");
-            System.out.println("1. Cargar Clientes");
-            System.out.println("2. Agregar Cuenta");
-            System.out.println("3. Registrar Llamada");
-            System.out.println("4. Agregar Recarga");
-            System.out.println("5. Generar Reporte Postpago");
-            System.out.println("6. Generar Reporte Recargas");
-            System.out.println("7. Guardar Sistema");
-            System.out.println("8. Cargar Sistema");
-            opcion = sc.nextInt();
             switch (opcion) {
                 case 1: menuCargarClientes(); break;
                 case 2: menuAgregarCuenta(); break;
@@ -36,6 +25,22 @@ public class TestConsola {
                 default: System.out.println("Opcion invalida. Intente de nuevo.");
             }
         } while (opcion != 0);
+    }
+
+    private static void mostrarMenu() {
+        System.out.println("\n========================================");
+        System.out.println("   JAVEMOVIL - SISTEMA DE FACTURACION   ");
+        System.out.println("========================================");
+        System.out.println("1. Cargar clientes");
+        System.out.println("2. Agregar cuenta (prepago/postpago)");
+        System.out.println("3. Registrar llamada");
+        System.out.println("4. Agregar recarga");
+        System.out.println("5. Reporte facturacion postpago (fin de mes)");
+        System.out.println("6. Reporte recargas prepago (fin de mes)");
+        System.out.println("7. Guardar sistema en archivo");
+        System.out.println("8. Cargar sistema desde archivo");
+        System.out.println("0. Salir");
+        System.out.println("----------------------------------------");
     }
 
 }
