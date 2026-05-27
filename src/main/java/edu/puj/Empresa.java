@@ -2,13 +2,13 @@ package edu.puj;
 
 import java.util.ArrayList;
 
-public class Empresa implements IEmpresa {
+public abstract class Empresa implements IEmpresa {
 
     private String nombre;
     public ArrayList<Cliente> Clientes = new ArrayList<>();
     public ArrayList<Cuenta> Cuentas = new ArrayList<>();
 
-    public Empresa(String nombre, ArrayList<Cliente> clientes, ArrayList<Cuenta> cuentas) {
+    public Empresa(String nombre) {
         this.nombre = nombre;
         Clientes = clientes;
         Cuentas = cuentas;
