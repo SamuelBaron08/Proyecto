@@ -2,7 +2,7 @@ package edu.puj;
 
 import java.util.ArrayList;
 
-public abstract class Empresa implements IEmpresa {
+public class Empresa implements IEmpresa {
 
     private String nombre;
     public ArrayList<Cliente> Clientes = new ArrayList<>();
@@ -10,8 +10,6 @@ public abstract class Empresa implements IEmpresa {
 
     public Empresa(String nombre) {
         this.nombre = nombre;
-        Clientes = clientes;
-        Cuentas = cuentas;
     }
 
     public String getNombre() {
@@ -34,5 +32,45 @@ public abstract class Empresa implements IEmpresa {
     @Override
     public ArrayList<Cliente> getClientes() {
         return Clientes;
+    }
+
+    @Override
+    public ArrayList<Cuenta> getCuentas() {
+        return null;
+    }
+
+    @Override
+    public void cargarClientes(String ruta) throws Exception {
+
+    }
+
+    @Override
+    public long agregarCuenta(String tipo, String identificacionCliente, long numero) throws Exception {
+        return 0;
+    }
+
+    @Override
+    public void registrarLlamadaNacional(long cuentaId, String fecha, long telefonoDestinario, long duracion) throws Exception {
+
+    }
+
+    @Override
+    public void registrarLlamadaInternacional(long cuentaId, String fecha, long telefonoDestinario, long duracion, String pais) throws Exception {
+
+    }
+
+    @Override
+    public void agregarRecarga(long cuentaId, String fecha, long valor) throws Exception {
+
+    }
+
+    @Override
+    public String reportePostpago(int anio, int mes, String identificacionCliente) throws Exception {
+        return "";
+    }
+
+    @Override
+    public String reporteRecargas(int anio, int mes) {
+        return "";
     }
 }
