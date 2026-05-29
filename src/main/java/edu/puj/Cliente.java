@@ -8,12 +8,12 @@ public class    Cliente {
     private String tipold;
     private Cuenta cuenta;
 
-    public Cliente(String direccion, String identificacion, String nombre, String tipold, Cuenta cuenta) {
-        this.direccion = direccion;
-        this.identificacion = identificacion;
+    public Cliente(String nombre, String identificacion, String tipold, String direccion) {
         this.nombre = nombre;
+        this.identificacion = identificacion;
         this.tipold = tipold;
-        this.cuenta = cuenta;
+        this.direccion = direccion;
+        this.cuenta = null;
     }
 
     public String getDireccion() {

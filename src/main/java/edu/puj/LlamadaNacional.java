@@ -4,18 +4,16 @@ import java.time.LocalDate;
 
 public class LlamadaNacional extends Llamada {
 
-    public LlamadaNacional(long duracion, LocalDate fecha, String telefonoDestinario) {
-        super(duracion, fecha, telefonoDestinario);
+    public LlamadaNacional(long duracion, LocalDate fecha, long telefonoDestinario, long valor) {
+        super(duracion, fecha, telefonoDestinario, valor);
     }
 
     @Override
     public long calcularValor(Cuenta cuenta) {
         long valor;
         if (cuenta instanceof Postpago) {
-            // Llamadas nacionales son ilimitadas (valor = 0) para postpago
             valor = 0;
         } else {
-            // Para prepago se cobra por minuto
             valor = getDuracion() * Utils.TARIFA_POR_MINUTO;
         }
         setValor(valor);
@@ -31,4 +29,6 @@ public class LlamadaNacional extends Llamada {
                 ", valor=" + getValor() +
                 '}';
     }
+
+
 }

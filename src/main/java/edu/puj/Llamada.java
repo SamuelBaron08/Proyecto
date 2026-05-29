@@ -16,6 +16,8 @@ public abstract class Llamada {
         this.valor = valor;
     }
 
+
+
     public long getDuracion() {
         return duracion;
     }
@@ -58,7 +60,6 @@ public abstract class Llamada {
                 '}';
     }
 
-    public abstract long calcularValor();
 
     public abstract long calcularValor(Cuenta cuenta);
 }
