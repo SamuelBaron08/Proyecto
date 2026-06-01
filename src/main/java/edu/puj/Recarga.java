@@ -8,6 +8,9 @@ public class Recarga {
 
     private long valor;
 
+    public Recarga(LocalDate fechaLocal, long valor) {
+    }
+
     public long getValor() {
         return valor;
     }
