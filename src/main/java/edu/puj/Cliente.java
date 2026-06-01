@@ -1,20 +1,25 @@
 package edu.puj;
 
-public class    Cliente {
+import java.io.Serializable;
+
+public class Cliente implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private String direccion;
-    private String identificacion;
+    private String identificacion;  // número de cédula
     private String nombre;
-    private String tipold;
-    private Cuenta cuenta;
+    private String tipold;          // tipo de identificación
+    private Cuenta cuenta;          // cada cliente tiene a lo sumo una cuenta
 
     public Cliente(String nombre, String identificacion, String tipold, String direccion) {
-        this.nombre = nombre;
-        this.identificacion = identificacion;
-        this.tipold = tipold;
-        this.direccion = direccion;
-        this.cuenta = null;
+        this.nombre= nombre;
+        this.identificacion= identificacion;
+        this.tipold= tipold;
+        this.direccion= direccion;
+        this.cuenta= null;
     }
+
 
     public String getDireccion() {
         return direccion;
@@ -56,14 +61,17 @@ public class    Cliente {
         this.cuenta = cuenta;
     }
 
+    public boolean tieneCuenta() {
+        return cuenta != null;
+    }
+
     @Override
     public String toString() {
         return "Cliente{" +
-                "direccion='" + direccion + '\'' +
-                ", identificacion='" + identificacion + '\'' +
-                ", nombre='" + nombre + '\'' +
-                ", tipold='" + tipold + '\'' +
-                ", cuenta=" + cuenta +
+                "nombre='"         + nombre         + '\'' +
+                ", tipold='"       + tipold          + '\'' +
+                ", identificacion='"+ identificacion + '\'' +
+                ", direccion='"    + direccion       + '\'' +
                 '}';
     }
 }
