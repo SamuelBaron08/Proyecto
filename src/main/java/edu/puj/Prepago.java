@@ -43,9 +43,16 @@ public class Prepago extends Cuenta {
 
 
     public boolean tieneSaldoSuficiente(long valorLlamada, int anio, int mes) {
-        return calcularSaldoMes(anio, mes) >= valorLlamada;
+        long totalRecargas = 0;
+        for (Recarga r : recargas) {
+            totalRecargas += r.getValor();
+        }
+        long totalLlamadas = 0;
+        for (Llamada l : getLlamadas()) {
+            totalLlamadas += l.getValor();
+        }
+        return (totalRecargas - totalLlamadas) >= valorLlamada;
     }
-
 
     public void agregarRecarga(Recarga recarga) {
         recargas.add(recarga);

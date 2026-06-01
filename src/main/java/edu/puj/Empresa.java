@@ -58,7 +58,7 @@ public class Empresa implements IEmpresa {
             }
         }
         System.out.println("Clientes cargados: " + agregados +
-                (repetidos > 0 ? " | Repetidos ignorados: " + repetidos : ""));
+                (repetidos > 0 ? "  Repetidos ignorados: " + repetidos : ""));
     }
 
     @Override
@@ -225,7 +225,7 @@ public class Empresa implements IEmpresa {
     @Override
     public String reporteRecargas(int anio, int mes) {
         String reporte = "";
-        reporte += "REPORTE RECARGAS PREPAGO " + mes + anio + "\n";
+        reporte += "REPORTE RECARGAS PREPAGO " + mes + " " + anio + "\n";
 
         ArrayList<Cliente> clientesPrepago = new ArrayList<>();
         for (Cliente c : clientes) {
@@ -288,7 +288,7 @@ public class Empresa implements IEmpresa {
                 reporte += "    (Sin recargas en este mes)\n";
             } else {
                 for (Recarga r : recargas) {
-                    reporte += "    Fecha: " + r.getFecha() + "Valor: $" + r.getValor() + "\n";
+                    reporte += "    Fecha: " + r.getFecha() + " Valor: $" + r.getValor() + "\n";
                     totalRecargasCliente += r.getValor();
                 }
             }
