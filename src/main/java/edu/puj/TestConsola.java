@@ -15,7 +15,7 @@ public class TestConsola {
             try {
                 opcion = Integer.parseInt(scanner.nextLine().trim());
             } catch (NumberFormatException e) {
-                System.out.println("⚠ Ingrese un número válido.\n");
+                System.out.println(" Ingrese un número válido.\n");
                 continue;
             }
             switch (opcion) {
@@ -27,8 +27,8 @@ public class TestConsola {
                 case 6:  menuReporteRecargas();  break;
                 case 7:  menuGuardarSistema();   break;
                 case 8:  menuCargarSistema();    break;
-                case 0:  System.out.println("¡Hasta luego!"); break;
-                default: System.out.println("⚠ Opción inválida.\n");
+                case 0:  System.out.println("Hasta luego!"); break;
+                default: System.out.println("Opción inválida.\n");
             }
         } while (opcion != 0);
         scanner.close();
@@ -59,7 +59,7 @@ public class TestConsola {
         System.out.print("Opción: ");
         String op = scanner.nextLine().trim();
         if (op.equals("1")) {
-            System.out.print("Ruta del archivo (ej: clientes.txt): ");
+            System.out.print("Ruta del archivo: ");
             String ruta = scanner.nextLine().trim();
             try {
                 empresa.cargarClientes(ruta);
@@ -121,38 +121,38 @@ public class TestConsola {
         try {
             long cuentaId = Long.parseLong(scanner.nextLine().trim());
 
-            System.out.println("Tipo de llamada:");
-            System.out.println("  1. Nacional");
-            System.out.println("  2. Internacional");
-            System.out.print("Opción: ");
+            System.out.println("1. Nacional");
+            System.out.println("2. Internacional");
+            System.out.print("Tipo de llamada: ");
             String tipoOp = scanner.nextLine().trim();
 
             System.out.print("Fecha (yyyy-MM-dd): ");
             String fecha = scanner.nextLine().trim();
-            System.out.print("Teléfono destinatario: ");
+
+            System.out.print("Telefono destinatario: ");
             long tel = Long.parseLong(scanner.nextLine().trim());
-            System.out.print("Duración (minutos): ");
+
+            System.out.print("Duracion (minutos): ");
             long duracion = Long.parseLong(scanner.nextLine().trim());
 
             if (tipoOp.equals("1")) {
                 empresa.registrarLlamadaNacional(cuentaId, fecha, tel, duracion);
             } else if (tipoOp.equals("2")) {
-                System.out.println("Países disponibles: Argentina, Brasil, Chile, Colombia,");
-                System.out.println("  Ecuador, España, Estados Unidos, México, Panamá,");
-                System.out.println("  Perú, Venezuela, Francia, Alemania, Italia, Reino Unido");
-                System.out.print("País de destino: ");
+                System.out.println("Paises: Argentina, Brasil, Chile, Colombia,");
+                System.out.println("  Ecuador, Espana, Estados Unidos, Mexico, Panama,");
+                System.out.println("  Peru, Venezuela, Francia, Alemania, Italia, Reino Unido");
+                System.out.print("Pais de destino: ");
                 String pais = scanner.nextLine().trim();
                 empresa.registrarLlamadaInternacional(cuentaId, fecha, tel, duracion, pais);
             } else {
-                System.out.println(" Opción de tipo de llamada inválida.");
+                System.out.println("Tipo de llamada invalido.");
             }
         } catch (NumberFormatException e) {
-            System.out.println("Ingrese valores numéricos válidos para ID, teléfono y duración.");
+            System.out.println("Ingrese valores numericos validos.");
         } catch (Exception e) {
-            System.out.println(" Error: " + e.getMessage());
+            System.out.println("Error: " + e.getMessage());
         }
     }
-
 
 
     private static void menuAgregarRecarga() {
@@ -211,7 +211,7 @@ public class TestConsola {
             String id = scanner.nextLine().trim();
             System.out.println(empresa.reportePostpago(anio, mes, id));
         } catch (NumberFormatException e) {
-            System.out.println("⚠ Ingrese valores numéricos válidos para año y mes.");
+            System.out.println(" Ingrese valores numéricos válidos para año y mes.");
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
