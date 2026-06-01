@@ -8,7 +8,9 @@ public class Recarga {
 
     private long valor;
 
-    public Recarga(LocalDate fechaLocal, long valor) {
+    public Recarga(LocalDate fecha, long valor) {
+        this.fecha = fecha;
+        this.valor = valor;
     }
 
     public long getValor() {
