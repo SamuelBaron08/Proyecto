@@ -2,7 +2,7 @@ package edu.puj;
 
 import java.time.LocalDate;
 
-public class Recarga {
+public class Recarga implements java.io.Serializable {
 
     private LocalDate fecha;
 
