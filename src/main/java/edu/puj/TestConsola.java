@@ -178,7 +178,7 @@ public class TestConsola {
             System.out.print("Valor de la recarga: $");
             long valor = Long.parseLong(scanner.nextLine().trim());
             empresa.agregarRecarga(cuentaId, fecha, valor);
-            // El mensaje de confirmación lo imprime Empresa.agregarRecarga()
+
         } catch (NumberFormatException e) {
             System.out.println(" Ingrese valores numéricos válidos.");
         } catch (Exception e) {
