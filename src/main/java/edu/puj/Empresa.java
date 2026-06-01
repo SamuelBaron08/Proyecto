@@ -12,7 +12,7 @@ public class Empresa implements IEmpresa {
 
     private String nombre;
     private ArrayList<Cliente> clientes = new ArrayList<>();
-    private ArrayList<Cuenta>  cuentas  = new ArrayList<>();
+    private ArrayList<Cuenta> cuentas = new ArrayList<>();
 
     public Empresa(String nombre) {
         this.nombre = nombre;
@@ -38,7 +38,7 @@ public class Empresa implements IEmpresa {
     @Override
     public ArrayList<Cuenta> getCuentas() {
         return cuentas;
-    }  // BUG CORREGIDO
+    }
 
     public void setCuentas(ArrayList<Cuenta> c) {
         this.cuentas = c;

@@ -9,8 +9,8 @@ public class Cliente implements Serializable {
     private String direccion;
     private String identificacion;  // número de cédula
     private String nombre;
-    private String tipold;          // tipo de identificación
-    private Cuenta cuenta;          // cada cliente tiene a lo sumo una cuenta
+    private String tipold;
+    private Cuenta cuenta;
 
     public Cliente(String nombre, String identificacion, String tipold, String direccion) {
         this.nombre= nombre;
