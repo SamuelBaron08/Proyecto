@@ -1,0 +1,6 @@
+#CLIENTES
+#nombre------------cedula---------direccion
+Carlos Torres *1923455 *calle 77 No. 34-56 – Bogota
+Maria Roa Lopez *4123455 *calle 37 No. 24-56 – Cali
+Oswaldo Williams *1923777 *calle 7 No. 3-56 – Bogota
+#FIN
