@@ -204,7 +204,7 @@ public class Empresa implements IEmpresa {
                     LlamadaInternacional li = (LlamadaInternacional) l;
                     linea += "  Tel: (" + li.getIndicativo().getCodigo() + ")" + l.getTelefonoDestinario();
                     linea += "  Pais: " + li.getPaisDestino();
-                    linea += " |Tipo: Internacional";
+                    linea += " Tipo: Internacional";
                 } else {
                     linea += "  Tel: " + l.getTelefonoDestinario();
                     linea += "  Tipo: Nacional";
@@ -262,7 +262,7 @@ public class Empresa implements IEmpresa {
                 reporte += "    (Sin llamadas en este mes)\n";
             } else {
                 for (Llamada l : llamadas) {
-                    String linea = "    Fecha: " + l.getFecha()
+                    String linea = "  Fecha: " + l.getFecha()
                             + " Duracion: " + l.getDuracion() + " min";
                     if (l instanceof LlamadaInternacional) {
                         LlamadaInternacional li = (LlamadaInternacional) l;

@@ -8,7 +8,7 @@ public class Postpago extends Cuenta {
 
     public Postpago(long id, long numero) {
         super(id, numero);
-        this.cargoFijo = Utils.CARGO_FIJO_DEFAULT; // $20.000 por defecto
+        this.cargoFijo = Utils.CARGO_FIJO_DEFAULT;
     }
 
     public Postpago(long id, long numero, long cargoFijo) {
@@ -20,8 +20,7 @@ public class Postpago extends Cuenta {
     public long obtenerPagoCuenta(int anio, int mes) {
         long totalInternacionales = 0;
         for (Llamada l : getLlamadas()) {
-            if (l instanceof LlamadaInternacional &&
-                    Utils.perteneceAlMes(l.getFecha(), anio, mes)) {
+            if (l instanceof LlamadaInternacional && Utils.perteneceAlMes(l.getFecha(), anio, mes)) {
                 totalInternacionales += l.getValor();
             }
         }

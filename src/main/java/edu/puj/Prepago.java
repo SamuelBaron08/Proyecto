@@ -11,7 +11,7 @@ public class Prepago extends Cuenta {
 
     public Prepago(long id, long numero) {
         super(id, numero);
-        this.numeroMinutos = Utils.MINUTOS_DEFAULT_PREPAGO; // 5 minutos por defecto
+        this.numeroMinutos = Utils.MINUTOS_DEFAULT_PREPAGO;
     }
 
     public Prepago(long id, long numero, long numeroMinutos) {
