@@ -28,8 +28,10 @@ public enum Indicativo implements Serializable {
         this.codigo  = codigo;
     }
 
-    public String getNombre()  { return nombre; }
-    public String getCodigo()  { return codigo; }
+    public String getNombre()  {
+        return nombre; }
+    public String getCodigo()  {
+        return codigo; }
 
 
     public static Indicativo buscarPorNombre(String nombrePais) {

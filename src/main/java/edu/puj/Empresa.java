@@ -15,32 +15,39 @@ public class Empresa implements IEmpresa {
     private ArrayList<Cuenta> cuentas = new ArrayList<>();
 
     public Empresa(String nombre) {
+
         this.nombre = nombre;
     }
 
     public String getNombre() {
+
         return nombre;
     }
 
     public void setNombre(String nombre) {
+
         this.nombre = nombre;
     }
 
     @Override
     public ArrayList<Cliente> getClientes() {
+
         return clientes;
     }
 
     public void setClientes(ArrayList<Cliente> c) {
+
         this.clientes = c;
     }
 
     @Override
     public ArrayList<Cuenta> getCuentas() {
+
         return cuentas;
     }
 
     public void setCuentas(ArrayList<Cuenta> c) {
+
         this.cuentas = c;
     }
 
@@ -57,8 +64,7 @@ public class Empresa implements IEmpresa {
                 repetidos++;
             }
         }
-        System.out.println("Clientes cargados: " + agregados +
-                (repetidos > 0 ? "  Repetidos ignorados: " + repetidos : ""));
+        System.out.println("Clientes cargados: " + agregados + (repetidos > 0 ? "  Repetidos ignorados: " + repetidos : ""));
     }
 
     @Override
@@ -92,8 +98,7 @@ public class Empresa implements IEmpresa {
 
 
     @Override
-    public void registrarLlamadaNacional(long cuentaId, String fecha, long telefonoDestinario, long duracion)
-            throws Exception {
+    public void registrarLlamadaNacional(long cuentaId, String fecha, long telefonoDestinario, long duracion)  throws Exception {
 
         Cuenta cuenta = buscarCuentaPorId(cuentaId);
         if (cuenta == null) {
@@ -109,8 +114,7 @@ public class Empresa implements IEmpresa {
             int anio = fechaLocal.getYear();
             int mes  = fechaLocal.getMonthValue();
             if (!prepago.tieneSaldoSuficiente(valor, anio, mes)) {
-                throw new JavemovilException(
-                        "Saldo insuficiente en cuenta prepago " + cuentaId + ". Saldo disponible: $" + prepago.calcularSaldoMes(anio, mes) + "  Costo llamada: $" + valor);
+                throw new JavemovilException( "Saldo insuficiente en cuenta prepago " + cuentaId + ". Saldo disponible: $" + prepago.calcularSaldoMes(anio, mes) + "  Costo llamada: $" + valor);
             }
         }
 
@@ -135,8 +139,7 @@ public class Empresa implements IEmpresa {
         }
 
         LocalDate fechaLocal = Utils.convertirStringFecha(fecha);
-        LlamadaInternacional llamada = new LlamadaInternacional(
-                duracion, fechaLocal, telefonoDestinario, indicativo);
+        LlamadaInternacional llamada = new LlamadaInternacional(duracion, fechaLocal, telefonoDestinario, indicativo);
         long valor = llamada.calcularValor(cuenta);
 
         if (cuenta instanceof Prepago) {
@@ -168,7 +171,9 @@ public class Empresa implements IEmpresa {
         Recarga recarga = new Recarga(fechaLocal, valor);
         ((Prepago) cuenta).agregarRecarga(recarga);
         System.out.println("Recarga de $" + valor + " agregada a la cuenta " + cuentaId);
+
     }
+
     @Override
     public String reportePostpago(int anio, int mes, String identificacionCliente) throws Exception {
         Cliente cliente = buscarClientePorId(identificacionCliente);

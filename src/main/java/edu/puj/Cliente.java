@@ -21,9 +21,7 @@ public class Cliente implements Serializable {
     }
 
 
-    public String getDireccion() {
-        return direccion;
-    }
+    public String getDireccion() { return direccion; }
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
@@ -62,6 +60,7 @@ public class Cliente implements Serializable {
     }
 
     public boolean tieneCuenta() {
+
         return cuenta != null;
     }
 

@@ -88,7 +88,6 @@ public class TestConsola {
             return;
         }
 
-        // Mostrar clientes disponibles
         System.out.println("\nClientes registrados:");
         if (empresa.getClientes().isEmpty()) {
             System.out.println("  (No hay clientes. Cargue clientes primero.)");

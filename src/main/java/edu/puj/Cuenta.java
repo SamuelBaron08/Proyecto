@@ -10,7 +10,7 @@ public abstract class Cuenta implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private long id;
-    private long numero;                          // número de teléfono asignado
+    private long numero;
     private ArrayList<Llamada> llamadas = new ArrayList<>();
 
     public Cuenta(long id, long numero) {

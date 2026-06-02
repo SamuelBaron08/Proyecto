@@ -8,10 +8,10 @@ public abstract class Llamada implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private long duracion;             //  minutos
+    private long duracion;
     private LocalDate fecha;
     private long telefonoDestinario;
-    private long valor;               // calculado tras calcularValor()
+    private long valor;
 
     public Llamada(long duracion, LocalDate fecha, long telefonoDestinario) {
         this.duracion = duracion;
