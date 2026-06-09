@@ -18,7 +18,6 @@ public class Empresa implements IEmpresa {
 
         this.nombre = nombre;
     }
-
     public String getNombre() {
 
         return nombre;
